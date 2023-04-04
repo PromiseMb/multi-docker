@@ -17,7 +17,7 @@ after_success:
   - docker build -t promisem/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hub
+  # Take those images and push them to your docker hub
   - docker push promisem/multi-client
   - docker push promisem/multi-nginx
   - docker push promisem/multi-server
